@@ -17,8 +17,9 @@ def get_ans_from_memory(question):
     for row in rows:
         if row[0].lower() in question.lower():
             answer = row[1]
+            #print(answer)
             break
     return answer
-              
+    
+               
 
-#print(get_ans_from_memory("What is the time"))

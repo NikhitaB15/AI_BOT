@@ -99,39 +99,18 @@ if __name__ == "__main__":
         elif 'is love' in query:
             speak("It is 7th sense that destroy all other senses.")         
                        
-        elif 'how are you' in query or 'how have you been' in query:
-            speak("Oh! I am great. Cannot complain. ")
-            speak("How are you?")
             
-        elif 'fine' in query or "good" in query:
-            speak("It's good to know that your fine")
- 
-        elif 'will you be my buddy' in query or 'will you be my bestie' in query:
-            speak('Oh!I would definitely love that. But it will be great if you ask Nikhita.')
-        
-        elif "who am i" in query:
-            speak("If you talk then definitely your human.")
             
-        elif "who am i to you" in query:
-            speak("You are user if Not Nikhita") 
-        
-        elif "will you be my gf" in query or "will you be my girlfriend" in query:  
-            speak("I'm not sure about it, may be.. you should give me some time")    
-            
-        elif "okay" in query or "ok" in query:
-            speak("yup")
-            
-        elif "thanks" in query or "thank you" in query:
-            speak("Welcome,its my pleasure") 
-            print("Welcome")   
+           
             
         elif "the time" in query:
             print(get_ans_from_memory("What is the time"))
             strTime = str(datetime.datetime.now().strftime("%H:%M:%S"))
             speak(f"Maam, the time is {strTime}")    
             print(strTime)
-        elif  get_ans_from_memory(query) !=NONE:
+        elif  get_ans_from_memory(query)!="":
             speak (get_ans_from_memory(query)) 
+            #print(get_ans_from_memory(query),"hi")
         else:
             speak("I don't understand Sorry")
             
